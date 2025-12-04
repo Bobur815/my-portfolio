@@ -89,9 +89,10 @@ const LanguageSwitcher: React.FC = () => {
             key={language.code}
             onClick={() => handleLanguageChange(language.code)}
             selected={language.code === currentLocale}
+            sx={{ gap: 1.5 }}
           >
             <ListItemIcon>
-              <span style={{ fontSize: '1.2rem' }}>{language.flag}</span>
+              <span style={{ fontSize: '1rem' }}>{language.flag}</span>
             </ListItemIcon>
             <ListItemText primary={language.name} />
           </MenuItem>

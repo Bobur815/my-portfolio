@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { CustomThemeProvider } from './theme/ThemeProvider'; 
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
@@ -66,6 +67,7 @@ export default async function LocaleLayout({
       <NextIntlClientProvider locale={locale} messages={messages}>
         <CustomThemeProvider>
           {children}
+          <SpeedInsights />
         </CustomThemeProvider>
       </NextIntlClientProvider>
     </div>
